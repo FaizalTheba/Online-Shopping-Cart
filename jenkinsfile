@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    
+    tools {
+        jdk 'JDK'
+        maven 'Maven-3.9.8'
+    }
+
+        stage('Compile') {
+            steps {
+                sh "mvn clean compile"
+            }
+        }
+    }
+}
